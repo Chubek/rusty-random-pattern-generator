@@ -27,7 +27,7 @@ fn main() {
 
     let mut pixmap = Pixmap::new(400, 400).unwrap();
     pixmap.fill_path(&path, &paint, FillRule::Winding, Transform::identity(), None);
-    pixmap.save_png("image.png").unwrap();
+    pixmap.save_png(format!("{}-pattern.png", seed)).unwrap();
 }
 
 fn crate_triangle(hash: u64) -> Pixmap {
